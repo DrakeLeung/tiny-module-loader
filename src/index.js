@@ -5,5 +5,5 @@ import {define} from './myDefine'
 //   './src/tmp/a-module.js'
 // ], (amodule, module2) => console.log(amodule, module2))
 
-// mot work with export default
+// mot work with 'export default'
 module.exports = define

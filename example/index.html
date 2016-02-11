@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../build/bundle.js"></script>
+</head>
+<body>
+  <script>
+    define([
+      './module1.js',
+      './module2.js'
+    ], (module1, module2) => {
+      console.log(module1, module2)
+    })
+  </script>
+</body>
+</html>

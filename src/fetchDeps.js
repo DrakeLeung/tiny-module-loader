@@ -1,8 +1,8 @@
 /**
- * fetchDeps: fetch dependencies using Ajax
+ * fetchDeps: fetch dependencies using Ajax & promise
  *
- * @param string $name [the url of the module]
- * @return promise object
+ * @param {string} $name [the url of the module]
+ * @return {promise object}
  */
 export const fetchDeps = name =>
   new Promise((resolve, reject) => {

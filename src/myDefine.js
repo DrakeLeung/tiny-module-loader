@@ -21,6 +21,7 @@ export const define = (deps, callback) => {
     .then(codes => {
       const modules = codes.map(getModule)
 
+      // without this, callback order is reverse
       modules.forEach(m =>
         !m.exported && m.onExport.push(() =>
           whenDepsExported(callback, modules, myModule)
