@@ -1,0 +1,33 @@
+{
+  "name": "tiny-module-loader",
+  "version": "1.0.0",
+  "description": "a simple AMD like module loader",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "module loader",
+    "AMD",
+    "es2015",
+    "es6"
+  ],
+  "author": "Drake Leung",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "html-webpack-plugin": "^2.7.1",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.7.3"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "babel-runtime": "^6.3.19"
+  }
+}

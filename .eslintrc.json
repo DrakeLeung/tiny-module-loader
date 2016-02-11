@@ -1,0 +1,14 @@
+{
+    "extends": "standard",
+    "plugins": [
+      "standard"
+    ],
+
+    "globals": {
+      "document": true
+    },
+
+    "rules": {
+      "curly": [0]
+    }
+}
