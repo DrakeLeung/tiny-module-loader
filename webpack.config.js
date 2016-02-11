@@ -1,14 +1,14 @@
-const path = require('path');
+const path = require('path')
 
-const merge = require('webpack-merge');
-const webpack = require('webpack');
-const HtmlwebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge')
+const webpack = require('webpack')
+const HtmlwebpackPlugin = require('html-webpack-plugin')
 
-const TARGET = process.env.npm_lifecycle_event;
+const TARGET = process.env.npm_lifecycle_event
 const PATHS = {
   src: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build')
-};
+}
 
 // common config
 const common = {
@@ -25,9 +25,7 @@ const common = {
   },
 
   plugins: [
-    new HtmlwebpackPlugin({
-      template: 'src/index.html'
-    })
+    new HtmlwebpackPlugin()
   ],
 
   module: {
@@ -44,10 +42,10 @@ const common = {
       }
     ]
   }
-};
+}
 
 // for dev env
-if(TARGET === 'start' || !TARGET) {
+if (TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devtool: '#inline-source-map',
     debug: true,
@@ -64,12 +62,11 @@ if(TARGET === 'start' || !TARGET) {
     plugins: [
       new webpack.HotModuleReplacementPlugin()
     ]
-  });
+  })
 }
 
-
-if(TARGET === 'build') {
+if (TARGET === 'build') {
   module.exports = merge(common, {
     devtool: 'eval'
-  });
+  })
 }
